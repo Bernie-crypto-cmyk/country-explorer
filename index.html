@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Country Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="site-title" href="#top">Where in the world?</a>
+
+      <button class="theme-button" id="theme-button" type="button">
+        <svg class="icon sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+ </svg>
+
+        <span class="theme-name">Light mode</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-content" id="top">
+    <section class="search-and-filter" aria-label="Search and filter countries">
+      <label class="search-box" for="search-bar">
+        <svg class="icon search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+        <input id="search-bar" type="search" placeholder="Search for a country" autocomplete="off">
+      </label>
+
+      <details class="region-filter">
+        <summary>Filter by region</summary>
+        <nav class="region-list" id="nav-container" aria-label="Regions">
+          <a href="">All regions</a>
+          <a href="">Africa</a>
+          <a href="">Americas</a>
+          <a href="">Asia</a>
+          <a href="">Europe</a>
+          <a href="">Oceania</a>
+		  <a href="">Antarctic</a>
+        </nav>
+      </details>
+    </section>
+
+    <section class="catalogue" id="catalogue" aria-label="Countries" aria-live="polite"></section>
+
+    <dialog class="country-dialog" id="country-dialog" aria-label="Country details"></dialog>
+  </main>
+
+  <footer class="site-footer"></footer>
+  <script src="script.js"></script>
+</body>
+</html>
